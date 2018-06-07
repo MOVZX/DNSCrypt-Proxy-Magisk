@@ -27,7 +27,7 @@
 ## The proxy will automatically pick the fastest, working servers from the list.
 ## Remove the leading # first to enable this; lines starting with # are ignored.
 
-# server_names = ['scaleway-fr', 'google', 'yandex', 'cloudflare']
+server_names = ['cloudflare', 'cisco', 'google']
 
 
 ## List of local addresses and ports to listen to. Can be IPv4 and/or IPv6.
@@ -97,12 +97,12 @@ keepalive = 30
 
 ## Load-balancing strategy: 'p2' (default), 'ph', 'fastest' or 'random'
 
-# lb_strategy = 'p2'
+lb_strategy = 'fastest'
 
 
 ## Log level (0-6, default: 2 - 0 is very verbose, 6 only contains fatal errors)
 
-# log_level = 2
+log_level = 6
 
 
 ## log file for the application
