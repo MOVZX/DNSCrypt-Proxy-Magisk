@@ -1,6 +1,6 @@
 # Changelog
 ## Changelog
-### v2.5.0
+### v2.6.0
 - Update binary files to 2.0.17
 ### v2.5.0
 - Update binary files to 2.0.16
