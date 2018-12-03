@@ -1,5 +1,8 @@
 # Changelog
 ## Changelog
+### v2.7.0
+- Update binary files to 2.0.19
+- Build for arm64 only
 ### v2.6.0
 - Update binary files to 2.0.17
 ### v2.5.0

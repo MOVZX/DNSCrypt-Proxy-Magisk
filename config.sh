@@ -44,8 +44,9 @@ print_modname() {
   ui_print "        DNSCrypt-Proxy2        "
   ui_print "         Magisk Module         "
   ui_print "*******************************"
-  ui_print "             v2.6.0            "
+  ui_print "             v2.7.0            "
   ui_print "            bluemeda           "
+  ui_print "             MOVZX             "
   ui_print "*******************************"
 }
 
@@ -103,15 +104,7 @@ set_permissions() {
 # Make update-binary as clean as possible, try to only do function calls in it.
 
 install_dnscrypt_proxy(){
-  if [ "$ARCH" == "arm" ];then
-    BINARY_PATH=$INSTALLER/binary/dnscrypt-proxy-arm
-  elif [ "$ARCH" == "arm64" ];then
-    BINARY_PATH=$INSTALLER/binary/dnscrypt-proxy-arm64
-  elif [ "$ARCH" == "x86" ];then
-    BINARY_PATH=$INSTALLER/binary/dnscrypt-proxy-x86
-  elif [ "$ARCH" == "x64" ];then
-    BINARY_PATH=$INSTALLER/binary/dnscrypt-proxy-x86_64
-  fi
+  BINARY_PATH=$INSTALLER/binary/dnscrypt-proxy-arm64
 
   OLD_CONFIG_FILE=$MODDIR/system/etc/dnscrypt-proxy/dnscrypt-proxy.toml
   NEW_CONFIG_FILE=$MODPATH/system/etc/dnscrypt-proxy/dnscrypt-proxy.toml
@@ -131,10 +124,10 @@ install_dnscrypt_proxy(){
   mkdir -p $MODPATH/system/etc/dnscrypt-proxy 2>/dev/null
 
   if [ -f "$BINARY_PATH" ]; then
-    ui_print "* Copying binary for $ARCH"
+    ui_print "* Copying binary for arm64"
     cp -af $BINARY_PATH $MODPATH/system/xbin/dnscrypt-proxy
   else
-    abort "Binary file for $ARCH is missing!"
+    abort "Binary file for arm64 is missing!"
   fi
 
   if [ -d "$CONFIG_PATH" ]; then
