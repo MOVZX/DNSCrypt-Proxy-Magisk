@@ -1,5 +1,7 @@
 # Changelog
 ## Changelog
+### v2.8.0
+- Remove Cisco from default resolver list
 ### v2.7.0
 - Update binary files to 2.0.19
 - Build for arm64 only

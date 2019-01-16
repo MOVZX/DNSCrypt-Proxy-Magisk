@@ -44,7 +44,7 @@ print_modname() {
   ui_print "        DNSCrypt-Proxy2        "
   ui_print "         Magisk Module         "
   ui_print "*******************************"
-  ui_print "             v2.7.0            "
+  ui_print "             v2.8.0            "
   ui_print "            bluemeda           "
   ui_print "             MOVZX             "
   ui_print "*******************************"
